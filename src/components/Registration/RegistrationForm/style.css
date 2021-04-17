@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 0.8239670868347339) 0%,
+    rgba(9, 113, 121, 1) 50%,
+    rgba(119, 0, 255, 0.9051995798319328) 100%
+  );
+}
+
+.container {
+  position: absolute;
+  max-width: 600px;
+  height: 400px;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.myLeftCtn {
+  position: relative;
+  background: #fff;
+  border-radius: 25px;
+  height: 100%;
+  padding: 25px;
+}
+.myLeftCtn header {
+  color: blueviolet;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.row {
+  height: 100%;
+}
+.myCard {
+  position: relative;
+  background: #fff;
+  height: 100%;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+}
+.myLeftCtn .myInput {
+  width: 75%;
+  border-radius: 25px;
+  padding: 10px;
+  padding-left: 10%;
+  border: none;
+  -webkit-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+}
+.myLeftCtn .myInput:focus {
+  outline: none;
+}
+.myForm {
+  position: relative;
+  margin-top: 10%;
+}
+.myLeftCtn .glow-on-hover {
+  color: #fff;
+  font-weight: 500;
+  width: 60%;
+  border: none;
+  outline: none;
+  position: relative;
+  z-index: 0;
+  border-radius: 25px;
+  padding: 10px;
+  -webkit-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+}
+
+.myLeftCtn .fas {
+  position: relative;
+  color: #bb36fd;
+  left: 36px;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #713391, #430064);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

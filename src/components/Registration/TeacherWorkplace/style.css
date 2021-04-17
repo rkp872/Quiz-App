@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 0.8239670868347339) 0%,
+    rgba(9, 113, 121, 1) 50%,
+    rgba(119, 0, 255, 0.9051995798319328) 100%
+  );
+}
+.single-content {
+  position: relative;
+  transition: 0.3s;
+  box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+.single-content .text-content,
+.single-content:after {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+}
+.single-content:after {
+  content: "";
+  display: block;
+  background: crimson;
+  top: 20px;
+  bottom: 20px;
+  opacity: 0;
+  transform: rotate3d(-1, 1, 0, 100deg);
+  transition: 0.4s;
+}
+.single-content:hover:after {
+  opacity: 0.9;
+  transform: rotate3d(0, 0, 0, 0deg);
+}
+.single-content img {
+  width: 100%;
+  height: 40vh;
+}
+.text-content {
+  top: 45%;
+  opacity: 0;
+  z-index: 1;
+  transform: translate(10%, -30%);
+  transition: 0.3s;
+  text-align: center;
+  color: #fff;
+}
+.single-content:hover .text-content {
+  opacity: 1;
+  transform: translate(0, -50%);
+  transition-delay: 0.3s;
+}

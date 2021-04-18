@@ -15,7 +15,8 @@ const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk, lo
 
 
 
-// Async Function for dispatching local storage date to redux
+// Async Function for dispatching 
+// localstorage date to redux after login
 const GET_USER_DATA_FROM_LOCALSTORAGE = () => {
     return function (dispatch) {
         let userData = localStorage.getItem(process.env.REACT_APP_LOCALSTORAGE)
@@ -26,12 +27,13 @@ const GET_USER_DATA_FROM_LOCALSTORAGE = () => {
         else {
             dispatch(SET_USER_DATA_ACTION({
                 isLoggedIn: false,
-                userProfileData: null,
+                userData: null,
                 token: null,
             }))
         }
     }
 }
+
 store.dispatch(GET_USER_DATA_FROM_LOCALSTORAGE())
 
 

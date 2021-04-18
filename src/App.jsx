@@ -1,13 +1,16 @@
-import React from "react";
-import { Provider } from "react-redux";
+import React from 'react';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import Home from './components/Home/Home';
+import store from './redux/store';
 
-import store from "./redux/store";
-import UserType from "./components/Registration/UserType/UserType";
 function App() {
   return (
     <Provider store={store}>
-      <div className="App"></div>
-      <UserType />
+
+      <BrowserRouter>    
+       <Home/>
+       </BrowserRouter>
     </Provider>
   );
 }

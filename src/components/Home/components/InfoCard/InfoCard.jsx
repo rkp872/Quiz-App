@@ -6,7 +6,7 @@ function InfoCard(props){
         <div className="col-6">
             <div className="card">
               <div className="single-content" >
-               <img src={props.Pic} alt="Image"/>
+               <img src={props.Pic} alt="HomeImage"/>
                 <div className="text-content">
                   <p className="card-text"><strong>{props.Text}</strong></p>
                   <p className="SubText">{props.Subtext}</p>

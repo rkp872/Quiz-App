@@ -27,7 +27,7 @@ const GET_USER_DATA_FROM_LOCALSTORAGE = () => {
         else {
             dispatch(SET_USER_DATA_ACTION({
                 isLoggedIn: false,
-                userProfileData: null,
+                userData: null,
                 token: null,
             }))
         }

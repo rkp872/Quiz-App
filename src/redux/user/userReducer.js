@@ -2,7 +2,7 @@ import { SET_USER_DATA } from "../ActionTypes";
 
 const initState = {
     isLoggedIn: false,
-    userProfileData: null,
+    userData: null,
     token: null,
 }
 
@@ -13,7 +13,7 @@ export const UserReducer = (state = initState, action) => {
             return {
                 ...state,
                 isLoggedIn: action.payload.isLoggedIn,
-                userProfileData: action.payload.userProfileData,
+                userData: action.payload.userData,
                 token: action.payload.token,
             }
 

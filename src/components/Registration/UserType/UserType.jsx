@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./style.css";
+import { Link } from "react-router-dom";
 
 class UserType extends Component {
   render() {
@@ -30,9 +31,17 @@ class UserType extends Component {
                         <br />
                         <br />― William Arthur Ward
                       </p>
-                      <a href="/" className="flip-box-button">
+                      <Link
+                        to={{
+                          pathname: "/registration-form",
+                          user: {
+                            userType: "teacher",
+                          },
+                        }}
+                        className="flip-box-button"
+                      >
                         Sign Up
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -58,9 +67,17 @@ class UserType extends Component {
                         <br />
                         <br /> — Malcolm X
                       </p>
-                      <a href="/" className="flip-box-button">
+                      <Link
+                        to={{
+                          pathname: "/registration-form",
+                          user: {
+                            userType: "student",
+                          },
+                        }}
+                        className="flip-box-button"
+                      >
                         Sign Up
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

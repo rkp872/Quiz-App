@@ -4,6 +4,7 @@ import childImage from "../Pictures/child.jpg";
 import boyImage from "../Pictures/boy.jpg";
 import girlImage from "../Pictures/girl.jpg";
 import womenImage from "../Pictures/woman.jpg";
+import { Link } from "react-router-dom";
 
 export default class StudentAge extends Component {
   render() {
@@ -40,10 +41,12 @@ export default class StudentAge extends Component {
             </div>
             <div class="col-md-3 col-sm-6">
               <div class="single-content">
-                <img src={womenImage} alt="" />
-                <div class="text-content">
-                  <h4>Above 18 Years</h4>
-                </div>
+                <Link to="/save-age">
+                  <img src={womenImage} alt="" />
+                  <div class="text-content">
+                    <h4>Above 18 Years</h4>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>

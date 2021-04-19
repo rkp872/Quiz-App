@@ -8,13 +8,25 @@ class RegistrationForm extends Component {
       email: "",
       password: "",
       terms: false,
+      userType: this.props.location.user.userType,
     };
   }
-  handleFormSubmit(event) {
-    // database service call
+  handleFormSubmit = (event) => {
     event.preventDefault();
-    //console.log(this.state);
-  }
+    console.log(this.state);
+
+    if (this.state.userType === "teacher") {
+      this.props.history.push({
+        pathname: "/teacher-workplace",
+        data: this.state,
+      });
+    } else {
+      this.props.history.push({
+        pathname: "/student-age",
+        data: this.state,
+      });
+    }
+  };
   render() {
     return (
       <>
